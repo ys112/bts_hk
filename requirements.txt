@@ -1,2 +1,2 @@
-mysql == 4.0.23
+mysql == 2.0.4
 tweepy == 3.5.0
