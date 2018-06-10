@@ -22,10 +22,10 @@ from datetime import datetime
 import sys
 import pyodbc
 
-cons_key = 'w9tYFK1j6rt87qH8b1OBU2EW8'
-cons_secret = 'p0I2qMUFQ5Gp83k8u3ro1HhML3RnDFWxeN2AerEAzmAvUR6NNl'
+cons_key = 'DF0CnjnudahLS2g5z0iq9Fa2y'
+cons_secret = 'lRAqc7HuSV1AVas4TyrQdf4o8zV08cFjcpCtRY0FXNeqrympMs'
 auth = OAuthHandler(cons_key, cons_secret)
-auth.set_access_token('2832602480-Gk9Yu83EmxxQWIdaSURYz3LvC16v3lLb8Z2UbC0', 'x5DDKJ9LDv6PSOuMO0BcMyjZ861MaBBFL50mjBiqPQcew')
+auth.set_access_token('995906967410393089-DBuV6coojcJULWJKu0B6PE1nXKzyYqg', 'xiJIsu4JibawLAa2HxrFiX6IHzQVrPgUPpRklee65patv')
 
  
 def store_data(tweets):
@@ -73,8 +73,11 @@ class listener(StreamListener):
         
     def on_error(self,status):
         listener.error_count +=1
+        if(listener.error_count == 5):
+          sys.exit(0)
         print(status)
-        print("on_error time: " + str(datetime.now()))       
+        print("on_error time: " + str(datetime.now()))
+        time.sleep(15)
         return False
 
 def start():
