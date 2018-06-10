@@ -1,2 +1,2 @@
-mysql == 2.0.4
+mysql-connector-python == 2.0.4
 tweepy == 3.5.0
