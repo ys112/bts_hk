@@ -1,2 +1,2 @@
-pyodbc == 4.0.23
+mysql == 4.0.23
 tweepy == 3.5.0
